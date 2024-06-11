@@ -5,6 +5,7 @@ Fork of original [ascent](https://github.com/cjquines/hexo-theme-ascent) theme w
 Changes :
 
 - p tags use `text-align: justified`
+- body width is changed from 32em -> 45 em, and correspondigly the code block width is changed
 
 
 

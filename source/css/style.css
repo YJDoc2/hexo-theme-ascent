@@ -41,7 +41,7 @@ body {
   margin: 3rem auto 10rem auto;
   max-width: 100%;
   padding: 1em;
-  width: 32em;
+  width: 45em;
 }
  
 @media all and (max-width:760px) {#wrapper {margin-top: 3rem;}}
