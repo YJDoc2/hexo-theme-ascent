@@ -7,6 +7,7 @@ Changes :
 - p tags use `text-align: justified`
 - body width is changed from 32em -> 45 em, and correspondigly the code block width is changed
 - move the sans/serif and light/dark button to top
+- change archive style to not have toggle, and instead be a simple list
 
 
 
