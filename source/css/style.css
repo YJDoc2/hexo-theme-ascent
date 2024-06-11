@@ -117,6 +117,10 @@ body {
   padding: 0;
 }
 
+.article-meta-item {
+  margin: 0.5em;
+}
+
 @media all and (max-width:760px) {
   .article-meta, .archive-article-date, .article-nav, .page-nav, .article-footer, .archive-article-word-count {
     font-size: 1em;
