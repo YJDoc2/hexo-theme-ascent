@@ -11,6 +11,7 @@ Changes :
 - change 'x' to '•' and add margin in article meta info
 - change 'x' to '•' in nav, also add '...' after post excerpt
 - move tags and categories to top of the post from bottom
+- add padding and <,> arrows in older/newer article links
 
 
 
