@@ -1,5 +1,15 @@
 # Ascent
 
+Fork of original [ascent](https://github.com/cjquines/hexo-theme-ascent) theme with some personal customizations.
+
+Changes :
+
+- p tags use `text-align: justified`
+
+
+
+---
+
 An opinionated Hexo theme for blogs with long blocks of text. [Demo.](https://cjquines.github.io/hexo-theme-ascent/)
 
 [![](sample.png)](https://cjquines.github.io/hexo-theme-ascent/)
