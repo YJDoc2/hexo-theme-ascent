@@ -422,7 +422,7 @@ td, th, table caption, table td, table th {
 
 #settings-container {
   background: var(--tertiary-color);
-  bottom: 0;
+  top: 0;
   position: fixed;
   right: 0;
 }
