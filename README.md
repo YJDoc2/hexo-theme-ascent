@@ -10,6 +10,7 @@ Changes :
 - change archive style to not have toggle, and instead be a simple list
 - change 'x' to '•' and add margin in article meta info
 - change 'x' to '•' in nav, also add '...' after post excerpt
+- move tags and categories to top of the post from bottom
 
 
 

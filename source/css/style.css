@@ -359,7 +359,6 @@ blockquote {
 .article-category, .article-tag {
   color: var(--secondary-color);
   font-family: var( --secondary-stack);
-  margin-top: 2em;
 }
 
 .article-more-link {
@@ -436,3 +435,9 @@ td, th, table caption, table td, table th {
   float: right;
   padding: 0.5em;
 }
+
+.flex-row{
+  display: flex;
+  justify-content: space-between;
+}
+

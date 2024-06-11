@@ -16,6 +16,42 @@
         </div>
       </header>
     <% } %>
+    <% if (!index && ((post.tags && post.tags.length) || (post.categories && post.categories.length))){ %>
+    <div class="flex-row"> 
+      <div class="article-tag">
+        <% if (post.tags && post.tags.length){ %>
+          <div>
+            <b>Tags:</b>
+            <%- list_tags(post.tags, {
+              show_count: false,
+              transform(str) {
+                return '#'+titlecase(str);
+              },
+              class: 'article-tag',
+              style: false
+            }) %>
+          </div>
+        <% } %>
+      </div>
+      <div class="article-category">
+        <% if (post.categories && post.categories.length){ %>
+          <div>
+            <b>Categories:</b>
+            <%- list_categories(post.categories, {
+              show_count: false,
+              class: 'article-category',
+              transform(str) {
+                return titlecase(str);
+              },
+              style: false
+            }) %>
+          </div>
+        <% } %>
+        </div>
+      </div>
+      <hr />
+    <% } %>
+
     <div class="article-entry" itemprop="articleBody">
       <% if (post.photos && post.photos.length){ %>
       <div class="article-gallery">
@@ -38,29 +74,6 @@
       <div class="article-more-link">
         <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
       </div>
-    <% } %>
-    <% if (!index && ((post.tags && post.tags.length) || (post.categories && post.categories.length))){ %>
-    <div class="article-category">
-      <% if (post.categories && post.categories.length){ %>
-        <b>Categories:</b>
-        <%- list_categories(post.categories, {
-          show_count: false,
-          class: 'article-category',
-          style: 'none'
-        }) %>
-      <% } %>
-      <% if ((post.tags && post.tags.length) && (post.categories && post.categories.length)){ %>
-        <br/>
-      <% } %>
-      <% if (post.tags && post.tags.length){ %>
-        <b>Tags:</b>
-        <%- list_tags(post.tags, {
-          show_count: false,
-          class: 'article-tag',
-          style: 'none'
-        }) %>
-      <% } %>
-    </div>
     <% } %>
     <% if (index && theme.intensedebate.enable && theme.intensedebate.acct){ %>
       <footer class="article-footer">
