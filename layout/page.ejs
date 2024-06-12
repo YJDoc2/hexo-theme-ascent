@@ -1,1 +1,19 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<article id="<%= page.layout %>-<%= page.title %>" class="article article-type-<%= page.layout %>" itemprop="page" itemscope>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      <% if (page.photos && page.photos.length){ %>
+      <div class="article-gallery">
+        <div class="article-gallery-photos">
+          <% page.photos.forEach(function(photo, i){ %>
+            <a class="article-gallery-img" data-fancybox="gallery" href="<%- url_for(photo) %>" rel="gallery_<%= page._id %>">
+              <img src="<%- url_for(photo) %>" itemprop="image">
+            </a>
+          <% }) %>
+        </div>
+      </div>
+      <% } %>
+       <%- page.content %>
+    </div>
+  </div>
+</article>
+

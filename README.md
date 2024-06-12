@@ -15,6 +15,7 @@ Changes :
 - move tags and categories to top of the post from bottom
 - add padding and <,> arrows in older/newer article links
 - remove word count next to title in archive list
+- change page layout for better standalone page rendering
 
 Each change has a corresponding commit, so you can cherry-pick or revert if you want to use them.
 
