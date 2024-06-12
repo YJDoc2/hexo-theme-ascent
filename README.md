@@ -2,6 +2,8 @@
 
 Fork of original [ascent](https://github.com/cjquines/hexo-theme-ascent) theme with some personal customizations.
 
+This adds commits on top of commit [c725143](https://github.com/cjquines/hexo-theme-ascent/commit/c725143fcdafa86737a3a3dd13826034efc57ef3) from the original repo.
+
 Changes :
 
 - p tags use `text-align: justified`
@@ -14,7 +16,9 @@ Changes :
 - add padding and <,> arrows in older/newer article links
 - remove word count next to title in archive list
 
+Each change has a corresponding commit, so you can cherry-pick or revert if you want to use them.
 
+I have directly committed on master, as it is easier for me to use this, and last update (at the time of writing) was over 2 years ago, so I think the original project is considered feature-complete.
 
 ---
 
