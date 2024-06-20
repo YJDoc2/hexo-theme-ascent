@@ -16,6 +16,7 @@ Changes :
 - add padding and <,> arrows in older/newer article links
 - remove word count next to title in archive list
 - change page layout for better standalone page rendering
+- add tag and category name as h2 on their respective pages
 
 Each change has a corresponding commit, so you can cherry-pick or revert if you want to use them.
 
