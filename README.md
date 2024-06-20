@@ -17,6 +17,7 @@ Changes :
 - remove word count next to title in archive list
 - change page layout for better standalone page rendering
 - add tag and category name as h2 on their respective pages
+- add special check for /tags and /categories page (not the best impl, but works)
 
 Each change has a corresponding commit, so you can cherry-pick or revert if you want to use them.
 

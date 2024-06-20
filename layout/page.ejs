@@ -1,19 +1,42 @@
-<article id="<%= page.layout %>-<%= page.title %>" class="article article-type-<%= page.layout %>" itemprop="page" itemscope>
-  <div class="article-inner">
-    <div class="article-entry" itemprop="articleBody">
-      <% if (page.photos && page.photos.length){ %>
-      <div class="article-gallery">
-        <div class="article-gallery-photos">
-          <% page.photos.forEach(function(photo, i){ %>
-            <a class="article-gallery-img" data-fancybox="gallery" href="<%- url_for(photo) %>" rel="gallery_<%= page._id %>">
-              <img src="<%- url_for(photo) %>" itemprop="image">
-            </a>
-          <% }) %>
+<% if (page.title === 'tags'){ %>
+  <h2>TAGS</h2>
+  <ul>
+    <% site.tags.sort('name').each((tag) => { %>
+      <li>
+          <a href="<%- url_for('/tags/' + tag.slug) %>">
+            <%= tag.name.toUpperCase() %>
+          </a>
+        </li>
+    <% }); %>
+  </ul>
+<% }else if(page.title === 'categories'){ %>
+   <h2>CATEGORIES</h2>
+   <ul>
+    <% site.categories.sort('name').each((category) => { %>
+      <li>
+          <a href="<%- url_for('/categories/' + category.slug) %>">
+            <%= category.name %>
+          </a>
+        </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <article id="<%= page.layout %>-<%= page.title %>" class="article article-type-<%= page.layout %>" itemprop="page" itemscope>
+    <div class="article-inner">
+      <div class="article-entry" itemprop="articleBody">
+        <% if (page.photos && page.photos.length){ %>
+        <div class="article-gallery">
+          <div class="article-gallery-photos">
+            <% page.photos.forEach(function(photo, i){ %>
+              <a class="article-gallery-img" data-fancybox="gallery" href="<%- url_for(photo) %>" rel="gallery_<%= page._id %>">
+                <img src="<%- url_for(photo) %>" itemprop="image">
+              </a>
+            <% }) %>
+          </div>
         </div>
+        <% } %>
+         <%- page.content %>
       </div>
-      <% } %>
-       <%- page.content %>
     </div>
-  </div>
-</article>
-
+  </article>
+<% } %>
