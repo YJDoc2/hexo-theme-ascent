@@ -10,22 +10,20 @@
   <% }) %>
 <% } else { %>
   <% var last; %>
-  <% var i = 0; %>
   <% page.posts.each(function(post, i){ %>
     <% var date_obj = post.date; %>
     <% var month = post.date.month(); %>
     <% if (last != month){ %>
       <% if (last != null){ %>
-        </div></section>
+        </section>
       <% } %>
       <% last = month; %>
-      <% i = i + 1 %>
-        <div class="month"><%= date(date_obj, "MMMM YYYY") %></div>
+        <section><div class="month"><%= date(date_obj, "MMMM YYYY") %></div>
     <% } %>
     <%- partial('archive-post', {post: post}) %>
   <% }) %>
   <% if (page.posts.length){ %>
-    </div></section>
+    </section>
   <% } %>
 <% } %>
 <% if (page.total > 1){ %>
