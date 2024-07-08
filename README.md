@@ -18,6 +18,7 @@ Changes :
 - change page layout for better standalone page rendering
 - add tag and category name as h2 on their respective pages
 - add special check for /tags and /categories page (not the best impl, but works)
+- set line-height to 2em for header nav in media max-width 760px
 
 Each change has a corresponding commit, so you can cherry-pick or revert if you want to use them.
 
